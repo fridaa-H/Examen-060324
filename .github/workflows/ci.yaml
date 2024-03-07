@@ -1,0 +1,24 @@
+name: EXAMEN CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Composer
+        run: composer install
+
+      - name: Composer
+        run: composer test
+
+      - name: Run code linter
+        run: composer lint
