@@ -36,4 +36,4 @@ jobs:
       run: composer test tests 
 
     - name: Run code linter
-      run: composer lint
+      run: composer lint srs
